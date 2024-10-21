@@ -1,0 +1,228 @@
+$secondary-color: #495f75;
+$highlight-color: #ffcc00;
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #333;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+
+    p {
+        color: white;
+        font-weight: bold; 
+        font-size: 28px;
+        margin-right: auto;
+        text-align: left; 
+        max-height: 30px;
+    }
+
+    .nav-container {
+        display: flex;
+        align-items: center;
+
+        a {
+            color: white;
+            width: 120px;
+            padding: 20px 0; 
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover {
+                background-color: #dddddd;
+                color: black;
+            }
+        }
+    }
+}
+
+.welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    height: calc(100vh - 60px);
+    padding: 20px; 
+}
+
+.welcome-message {
+    text-align: center; 
+    margin: 20px 0;
+
+    .big-text {
+        font-size: 3em; 
+        margin: 0; 
+
+        @media (max-width: 768px) {
+            font-size: 2.5em;
+        }
+
+        @media (max-width: 480px) {
+            font-size: 2em;
+        }
+    }
+
+    p {
+        font-size: 1.5em; 
+
+        @media (max-width: 768px) {
+            font-size: 1.2em; 
+        }
+    }
+
+    i {
+        color: #3d3e40e4;
+        font-size: 2em; 
+        margin-top: 20px; 
+        padding-top: 5%;
+
+        @media (max-width: 768px) {
+            font-size: 1.5em;
+        }
+    }
+}
+
+.about-section, .project-section, .contact-section {
+    padding: 40px;
+    text-align: center; 
+    background-color: #f9f9f9; 
+    margin: 20px 0; 
+
+    .line {
+        width: 40%; 
+        height: 1px; 
+        background-color: #000; 
+        margin: 0 auto; 
+    }
+
+    h2 {
+        font-size: 2em; 
+
+        @media (max-width: 768px) {
+            font-size: 1.5em; 
+        }
+    }
+
+    p {
+        font-size: 1.2em; 
+        max-width: 800px; 
+        line-height: 1.6; 
+        text-align: justify; 
+        margin: 10px auto; 
+        padding-top: 3%;
+
+        @media (max-width: 768px) {
+            font-size: 1em; 
+        }
+    }
+}
+
+.project-section {
+    display: flex;
+    flex-direction: column; 
+    padding: 40px;
+    background-color: #f9f9f9;
+
+    .project-container {
+        display: flex;
+        justify-content: center; // Center content
+        flex-wrap: wrap; // Allow wrapping
+
+        .project-list {
+            display: flex;
+            flex-wrap: nowrap; // Prevent wrapping on larger screens
+
+            .project-item {
+                background: #495f75; 
+                color: white;
+                border-radius: 10px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+                padding: 2rem;
+                margin: 1rem;
+                flex: 0 0 300px; // Fixed width for larger screens
+                max-width: 300px; 
+
+                @media (max-width: 1267px) {
+                    flex: 0 0 calc(50% - 2rem); // Two items per row below 1267px
+                }
+
+                @media (max-width: 768px) {
+                    flex: 0 0 calc(100% - 20px); // Full width on smaller screens
+                }
+            }
+        }
+    }
+
+    .github-button-container {
+        margin-top: 45px; 
+        text-align: center; 
+    }
+}
+
+.github-button {
+    color: white; 
+    text-decoration: none; 
+    padding: 10px; 
+    background-color: #333; 
+    border-radius: 5px; 
+
+    &:hover {
+        background-color: #dddddd;
+        color: black;
+    }
+}
+
+.github-button i {
+    margin-right: 5px; 
+}
+
+.contact-section {
+    background-color: #f9f9f9; 
+
+    .contact-info {
+        font-size: 1.2em;
+        justify-content: space-between;
+
+        button {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: white;
+            border-style: none;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+        i {
+            font-size: 35px;
+            color: #3d3e40e4;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .contact-info {
+            flex-direction: column; 
+            align-items: center;
+            font-size: 1em; 
+        }
+    }
+}
