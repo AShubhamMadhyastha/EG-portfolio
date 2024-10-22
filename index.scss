@@ -136,12 +136,12 @@ nav {
 
     .project-container {
         display: flex;
-        justify-content: center; // Center content
-        flex-wrap: wrap; // Allow wrapping
+        justify-content: center; 
+        flex-wrap: wrap; 
 
         .project-list {
             display: flex;
-            flex-wrap: nowrap; // Prevent wrapping on larger screens
+            flex-wrap: nowrap; 
 
             .project-item {
                 background: #495f75; 
@@ -150,15 +150,15 @@ nav {
                 box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
                 padding: 2rem;
                 margin: 1rem;
-                flex: 0 0 300px; // Fixed width for larger screens
+                flex: 0 0 300px; 
                 max-width: 300px; 
 
                 @media (max-width: 1267px) {
-                    flex: 0 0 calc(50% - 2rem); // Two items per row below 1267px
+                    flex: 0 0 calc(50% - 2rem); 
                 }
 
                 @media (max-width: 768px) {
-                    flex: 0 0 calc(100% - 20px); // Full width on smaller screens
+                    flex: 0 0 calc(100% - 20px); 
                 }
             }
         }
